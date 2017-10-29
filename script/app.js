@@ -92,7 +92,7 @@ var Location = function(data) {
 
     self.formattedAddress = self.street + ", " + self.city + " " + self.zip;
   }).fail(function() {
-    alert("There was an error loading FourSquare API call. Please refresh the page and try again.")
+    alert("There was an error loading FourSquare API call. Please refresh the page and try again.");
   });
 
   //Define content inside infowindow
