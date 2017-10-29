@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Neighborhood Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="app">
+    <div id="left-nav">
+      <h3>My Neighborhood</h3>
+      <input id="search-box" type="text" data-bind="textInput: query, valueUpdate: 'afterkeydown'">
+      <ul class="result-list" data-bind="foreach: shownLocantions">
+        <li class="location" data-bind="text: name, click: listAnimate"></li>
+      </ul>
+    </div>
+    <div id="map">Google Map didn't load properly.</div>
+
+    <!-- Load scripts -->
+    <script src="script/lib/jquery-3.2.1.js"></script>
+    <script src="script/lib/knockout-3.2.0.js"></script>
+    <script src="script/app.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvPM35xClK87HZ_F6T-VlDd0bu343fdrA&v=3&callback=initApp">
+    </script>
+  </body>
+</html>

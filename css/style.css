@@ -1,0 +1,57 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+
+#left-nav {
+  background-color: #606266;
+  color: #ffffff;
+  order: 1;
+  flex-grow: 1;
+}
+
+#search-box {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.result-list {
+  list-style: none;
+  padding-left:0;
+  flex-grow: 1;
+}
+
+.location {
+  flex-grow: 1;
+  padding: 5px;
+  margin: 5px;
+  background-color: #314b72;
+}
+
+#map {
+  order: 2;
+  flex-grow: 6;
+  height: 800px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 599px) {
+  .app {
+    flex-direction: column;
+  }
+}
