@@ -78,7 +78,11 @@ var Location = function(data) {
   //Call FourSquare API to get formatted address for each location
   $.getJSON(foursqaureURL).done(function(data) {
     var results = data.response.venues[0];
+
     self.street = results.location.formattedAddress[0];
+    if(typeof self.street === 'undefined') {
+      self.street = "";
+    }
 
     self.zip = results.location.formattedAddress[1];
     if (typeof self.zip === 'undefined') {
@@ -174,3 +178,8 @@ var viewModel = function() {
 var initApp = function() {
   ko.applyBindings(new viewModel());
 };
+
+//Error handling for Google Maps failed loading
+function googleError() {
+  alert("Google Maps didn't load properly. Please refresh the page and try again.");
+}

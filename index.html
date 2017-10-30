@@ -14,14 +14,14 @@
         <li class="location" data-bind="text: name, click: listAnimate"></li>
       </ul>
     </div>
-    <div id="map">Google Map didn't load properly.</div>
+    <div id="map"></div>
 
     <!-- Load scripts -->
     <script src="script/lib/jquery-3.2.1.js"></script>
     <script src="script/lib/knockout-3.2.0.js"></script>
     <script src="script/app.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvPM35xClK87HZ_F6T-VlDd0bu343fdrA&v=3&callback=initApp">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvPM35xClK87HZ_F6T-VlDd0bu343fdrA&v=3&callback=initApp" onerror="googleError()">
     </script>
   </body>
 </html>
